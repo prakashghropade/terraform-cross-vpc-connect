@@ -92,7 +92,7 @@ resource "aws_route_table" "primary_rt" {
 # secondary route table
 resource "aws_route_table" "secondary_rt" {
     provider = aws.secondary
-    vpc_id = aws_vpc.secodary_vpc
+    vpc_id = aws_vpc.secodary_vpc.id
 
     route {
         cidr_block = "0.0.0.0/0"
