@@ -286,7 +286,7 @@ resource "aws_instance" "secondary_instance" {
   ami                    = data.aws_ami.secondary_ami.id
   instance_type          = var.instance_type
   subnet_id              = aws_subnet.secondary_subnet.id
-  vpc_security_group_ids = [aws_security_group.secondary_sg.id]
+  vpc_security_group_ids = [aws_security_group.secondary-sg.id]
   key_name               = var.secondary_key_name
 
   user_data = local.secondary_user_data
