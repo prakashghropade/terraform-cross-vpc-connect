@@ -27,7 +27,7 @@ resource "aws_subnet" "primary_subnet" {
     provider = aws.primary
     vpc_id = aws_vpc.primary_vpc.id
     cidr_block = var.primary_vpc_cidr
-    availability_zone = data.aws_availibility_zones.primary.names[0]
+    availability_zone = data.aws_availability_zones.primary.names[0]
     map_public_ip_on_launch = true
 
     tags = {
